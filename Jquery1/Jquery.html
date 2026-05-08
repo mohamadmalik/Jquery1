@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+     // Mohamad Malik Fadillah Arwin 
+    </script>
+    <script>
+        $(document).ready(function(){
+
+        $("#btnChain").click(function(){
+                $("#hantu-chain")
+                    .css("color", "orange")
+                    .slideUp(1000)
+                    .slideDown(1000);
+            });
+
+            $("#hide").click(function(){
+                $(".p1").hide();
+            });
+            $("#show").click(function() {
+                $(".p1").show();
+            });
+            $("#toggle").click(function() {
+                $(".p1").toggle();
+                });
+            $("#hide2").click(function(){
+                $(".p2").fadeOut("slow", function(){
+                    alert("Hantunya ngumpet");
+                });
+            });
+            $("#show2").click(function() {
+                $(".p2").fadeIn("slow", function(){
+                    alert("Hantunya keluar!!!");
+                });
+            });
+            $("#toggle2").click(function() {
+                $(".p2").toggle("slow");
+            });
+            $("#flipb").click(function(){
+                $(".panel").slideDown();
+             });
+             $("#flipa").click(function(){
+                $(".panel").slideUp();
+             });
+             $("#flipc").click(function(){
+                $(".panel").slideToggle();
+             });
+             $("#anime").click(function(){
+                $(".div").animate({top: '+=500px'},8000);
+            }); 
+            
+            $("#stop").click(function(){
+                $(".div").stop();
+            });
+            
+
+        });
+    
+
+    </script>
+
+    <style>
+        .container {
+            width: 200px;
+            height: 400px;
+            color: aquamarine;
+        }
+    </style>
+    
+</head>
+<body>
+   
+    <title>Document</title>
+    <pre style="margin-top: 90px; margin-bottom: -60px;">Chaining                                                  Hide/Show                                                Fade & Callback                                        Slide                                                  Animate & Stop</pre>
+
+    <div style="margin-top: 30px; position: absolute;">
+        <p id="hantu-chain" style="font-size: 100px; margin-top: 70px; margin-bottom: 65px;">👻</p>
+        <button id="btnChain">Chaining</button>
+    </div>
+
+    <div style=" margin-left: 400px;">
+    <p class="p1" style="font-size: 100px; position: absolute; " >👻</p>
+    <button id="hide" style="margin-top: 300px;">Ciluk</button>
+    <button id="show">Baaa</button>
+    <button id="toggle">Toggle baa</button>
+</div>
+    
+    
+    <div style="margin-left: 800px; margin-top: -320px;">
+    <p class="p2" style="font-size: 100px; position: absolute; " >👻</p>
+    <button id="hide2" style="margin-top: 300px;">Ciluk</button>
+    <button id="show2">Baaa</button>
+    <button id="toggle2">Toggle</button>
+</div>
+
+<div style="margin-left: 1200px; margin-top: -320px;">
+    <p class="panel" style="font-size: 100px; position: absolute; " >👻</p>
+    <button id="flipa" style="margin-top: 300px;">Ciluk</button>
+    <button id="flipb">Baaa</button>
+    <button id="flipc">Toggle</button>
+</div>
+
+<div style="margin-left: 1600px; margin-top: -320px;">
+    <p class="div" style="font-size: 100px; position: absolute; margin-left: 90px; padding-right: 50px;" >👻</p>
+    <button id="anime" style="margin-top: 300px; margin-left: 0PX;">Pindah</button>
+    <button id="stop">Stop</button>
+
+</div>
+</body>
+</html>
